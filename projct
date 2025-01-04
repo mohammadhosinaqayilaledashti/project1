@@ -1,0 +1,11 @@
+library iee;
+use iee . std_logic_1164.all;
+entity dataflow is
+ port(a,b,cin : in std_logic;
+sum,cont : out std_logic);
+end;
+architecture df of dataflow is
+begin
+sum<= a xor cin;
+cont <= (a and b) or (b and cin) or (a and cin);
+end ;
